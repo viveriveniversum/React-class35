@@ -1,38 +1,96 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header .navlist {
+  list-style: none;
+  display: flex;
+}
+
+.category-item {
+  background-color: #efeff0;
+  cursor: none;
+  font-weight: 700;
+  margin: 2px;
+  padding: 12px;
+  /* font */
+}
+
+.category-btn {
+  border: none;
+  font-weight: bold;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.products ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.products li {
+  margin: 8px;
+  list-style: none;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+}
+
+.product img {
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product span {
+  overflow: hidden;
+  padding-top: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 960px) {
+  .products .product {
+    width: calc(33% - 16px);
   }
-  to {
-    transform: rotate(360deg);
+  .products li {
+    width: calc(33% - 16px);
+  }
+}
+
+@media (max-width: 960px) {
+  .products .product {
+    width: calc(50% - 16px);
+  }
+  .products li {
+    width: calc(50% - 16px);
   }
 }

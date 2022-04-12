@@ -3,9 +3,9 @@ import React from "react";
 function Card({ product }) {
   return (
     <li>
-      <div>
+      <div className="product">
         <img src={product.image} alt={product.title}></img>
-        <p>{product.title}</p>
+        <span>{product.title}</span>
       </div>
     </li>
   );
