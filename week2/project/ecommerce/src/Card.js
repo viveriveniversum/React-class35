@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card({ product }) {
   return (
     <li>
-      <div className="product">
-        <img src={product.image} alt={product.title}></img>
-        <span>{product.title}</span>
-      </div>
+      <Link to={`/products/${product.id}`}>
+        <div className="product">
+          <img src={product.image} alt={product.title}></img>
+          <span>{product.title}</span>
+        </div>
+      </Link>
     </li>
   );
 }
