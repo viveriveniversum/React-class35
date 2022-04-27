@@ -4,16 +4,15 @@ function NavItem({ category, getProducts }) {
   const [categoryState, setCategoryState] = useState(false);
   return (
     <li className="category-item">
-      <button
+      <input
         className={`category-btn ${categoryState ? "active" : ""}`}
+        type="button"
         value={category}
         onClick={(e) => {
           getProducts(`/category/${e.target.value}`);
           setCategoryState(!categoryState);
         }}
-      >
-        {category}
-      </button>
+      />
     </li>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card.js";
 
 function Products({ products }) {
+  console.log(products);
   return (
     <ul className="product-list">
       {products.map((product, index) => (
